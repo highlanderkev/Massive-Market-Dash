@@ -17,6 +17,15 @@ localPort = 25346
 [services.development]
 run = "streamlit run /home/runner/workspace/artifacts/market-dashboard/app.py --server.port 25346 --server.address 0.0.0.0 --server.headless true"
 
+[services.production]
+
+[services.production.run]
+args = ["streamlit", "run", "artifacts/market-dashboard/app.py", "--server.port", "25346", "--server.address", "0.0.0.0", "--server.headless", "true"]
+
+[services.production.run.env]
+PORT = "25346"
+BASE_PATH = "/"
+
 [services.env]
 PORT = "25346"
 BASE_PATH = "/"
