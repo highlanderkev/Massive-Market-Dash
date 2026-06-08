@@ -1,0 +1,22 @@
+kind = "web"
+previewPath = "/"
+title = "Market Dashboard"
+version = "1.0.0"
+id = "artifacts/market-dashboard"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25346
+
+[services.development]
+run = "streamlit run /home/runner/workspace/artifacts/market-dashboard/app.py --server.port 25346 --server.address 0.0.0.0 --server.headless true"
+
+[services.env]
+PORT = "25346"
+BASE_PATH = "/"
